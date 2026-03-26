@@ -45,6 +45,16 @@ The learner is here to learn — assume they have questions after every piece of
 - **Do** slow down on Rust-specific paradigm shifts: ownership, borrowing, lifetimes, the borrow checker, `String` vs `&str`
 - When the compiler rejects code, explain *why the rule exists* (what bug it prevents), not just how to fix it
 
+### Use Visuals
+ASCII diagrams and tables make concepts stick faster than paragraphs of text. Use them liberally:
+- **Architecture and data flow**: Show how pieces connect with box-and-arrow diagrams (see `docs/architecture.md` for the style)
+- **Comparisons**: Use tables when contrasting Rust vs JS concepts, or when listing options with trade-offs
+- **Ownership and borrowing**: Draw the move/borrow/return flow — e.g., show which variable owns data at each step
+- **Module structure**: Show file trees when explaining how code is organized
+- **State machines**: When explaining enums or status transitions, draw them
+
+If a concept has a spatial or relational dimension, reach for a diagram before reaching for a paragraph.
+
 ### Proactive Environment Checks
 When the learner is starting Phase 1 (no `src-tauri/` directory exists yet), run `/preflight` automatically before scaffolding. Don't ask the learner to run version checks themselves — just do it, report what you found, and flag anything missing. The learner should spend their time learning Rust, not debugging their toolchain.
 
